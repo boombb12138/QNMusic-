@@ -1,0 +1,83 @@
+<!--pages/home-pages/index.wxml-->
+<!-- 登录模块 -->
+<view class="signup">
+    <view class="userInfo">
+        <image class="avatarUrl" src="{{avatarUrl}}" mode="widthFix"></image>
+        <text class="userName">{{nickName}}</text>
+    </view>
+
+    <button open-type="getUserInfo" bindtap="{{btnClick}}" class="btn" style="display: {{issignUpShow}};">登录</button>
+    <button class="btn" bindtap="handleLogout" style="display: {{isLogoutShow}};">退出</button>
+</view>
+<!-- 搜索框 -->
+<van-search disabled background='#fafafa' shape='round' placeholder="请输入您喜欢的歌曲" bind:click-input="handleSearchClick"></van-search>
+
+<!-- 轮播图 -->
+<swiper class="swiper" indicator-dots autoplay circular style="height:{{swiperHeight}}px">
+    <block wx:for="{{banners}}" wx:key="bannerId">
+        <swiper-item class="swiper-item">
+            <image class="swiper-image" src="{{item.pic}}" mode="widthfix" bindload="handleSwiperImageLoaded"></image>
+        </swiper-item>
+    </block>
+</swiper>
+
+<!-- 推荐歌曲 -->
+<view class="recommand-song" wx:if="{{recommendSongs.length >0}}">
+    <area-header title="推荐歌曲" bind:click="handleMoreClick">
+    </area-header>
+    <view class="song-list">
+        <block wx:for="{{recommendSongs}}" wx:key="id">
+            <song-item-v1 item="{{item}}" data-index="{{index}}" bindtap="handleItemClick"></song-item-v1>
+        </block>
+    </view>
+</view>
+
+<!-- 熱門/推荐歌单 -->
+<song-menu-v1 songMenu="{{hotSongMenu}}" title="热门歌单" wx:if="{{hotSongMenu.length >0}}"></song-menu-v1>
+<song-menu-v1 songMenu="{{recommendSongMenu}}" title="推荐歌单" wx:if="{{recommendSongMenu.length >0}}"></song-menu-v1>
+
+<!-- 巅峰榜 -->
+<view class="ranking">
+    <area-header title="巅峰榜" showRight="{{false}}"> </area-header>
+    <block wx:for="{{rankings}}" wx:key="name">
+        <rangking-area-item item="{{item}}" class="rangking-area-item" bindtap="handleRankingItemClick" data-idx="{{index}}">
+        </rangking-area-item>
+    </block>
+</view>
+
+<view class="play-bar-placeholder" wx:if="{{currentSong.id}}"></view>
+<view class="play-bar" wx:if="{{currentSong.al !== undefined}}" bindtap="handlePlayBarClick">
+    <view class="left">
+        <image src="{{currentSong.al.picUrl}}" mode="aspectFit" class="album albumAnimation" style="animation-play-state:{{playState}};"></image>
+        <view class="info">{{currentSong.name}}</view>
+    </view>
+    <view class="right">
+        <!-- catchtap阻止事件向上传递 -->
+        <image class="icon btn-pause" src="/assets/images/music/{{playingName}}_icon.png" catchtap="handleBtnPauseClick"></image>
+        <image class="icon playlist" src="/assets/images/music/playlist_icon.png" catchtap="handleMusicListClick"></image>
+    </view>
+</view>
+
+<!-- 歌曲列表 -->
+<!--  -->
+<view class="songList {{songListAnimation}}" style="display: {{songListDisplay}}">
+    <view class="songListHeader">
+        <view class="playing">当前播放
+        </view>
+        <view class="closeList">
+            <image src="/assets/images/icons/close.png" mode="widthFix" class="closebtn" bindtap="handleCloseList"></image>
+        </view>
+    </view>
+
+    <scroll-view class="playSongList" scroll-y>
+        <block wx:for="{{playSongList}}" wx:key="index">
+            <view item="{{item}}" class="playSongList-item" bindtap="handleRankingItemClick" data-idx="{{index}}">
+                {{item.al.name}}
+                <span class="arName">
+                    -{{item.ar[0].name}}
+                </span>
+            </view>
+        </block>
+    </scroll-view>
+
+</view>

@@ -1,0 +1,208 @@
+/* pages/home-pages/index.wxss */
+page {
+    padding: 0 20rpx;
+}
+
+/* 登录 */
+.signup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.userInfo {
+    display: flex;
+    align-items: center;
+}
+
+.userName {
+    font-size: 24rpx;
+    color: #8d8c8c;
+}
+
+.avatarUrl {
+    width: 60rpx;
+    border-radius: 50%;
+    margin-right: 15rpx;
+}
+
+.btn {
+    font-size: 20rpx;
+    width: 100rpx;
+    margin: 0 10rpx;
+    padding: 0px;
+}
+
+/* 搜索栏 */
+.van-search {
+    padding: 10px 0px !important;
+}
+
+.van-search__content {
+    padding-left: 0px !important;
+}
+
+
+.van-field__control {
+    background-color: #fff !important;
+}
+
+.swiper {
+    /* 超出部分隐藏 圆角才有效果 */
+    border-radius: 5px;
+    overflow: hidden;
+    /* 左上角也要有圆角 手机的bug */
+    transform: translateY(0);
+}
+
+
+.swiper-item .swiper-image {
+    /* height: 100%; */
+    width: 100%;
+    height: 100%;
+}
+
+/* 底部歌曲播放栏 */
+.play-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    padding: 0 8px;
+
+    box-shadow: 0 -5rpx 5px rgba(0, 0, 0, .5);
+
+    height: 44px;
+    background-color: #fafafa;
+}
+
+.play-bar .left,
+.play-bar .right {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.play-bar .left .album {
+    position: relative;
+    top: -9px;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+}
+
+.play-bar .left .info {
+    margin-left: 5px;
+    color: rgb(100, 100, 100);
+}
+
+.play-bar .right .btn-pause {
+    width: 30px;
+    height: 30px;
+}
+
+.play-bar .right .playlist {
+    width: 38px;
+    height: 38px;
+}
+
+@keyframes albumRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.albumAnimation {
+    animation: albumRotate 16s infinite;
+}
+
+.play-bar-placeholder {
+    height: 44px;
+}
+
+/* 歌曲列表 */
+
+.playSongList {
+    margin-top: 20rpx;
+    height: 100vw;
+}
+
+
+.songList {
+    display: flex;
+    position: absolute;
+    box-sizing: border-box;
+    right: 20rpx;
+    left: 20rpx;
+    padding: 15rpx 10rpx;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+
+    bottom: 120rpx;
+    background-color: #fafafa;
+    overflow: hidden;
+    border-radius: 20rpx;
+    color: #333232;
+    box-shadow: 10rpx -10rpx 10rpx rgba(0, 0, 0, .5);
+}
+
+@keyframes songListupAnimation {
+    from {
+        transform: translateY(150rpx)
+    }
+
+    to {
+        transform: translateY(0rpx);
+    }
+}
+
+.songListupAnimation {
+    animation: songListupAnimation 2s;
+}
+
+.songListdownAnimation {
+    animation: songListupAnimation 2s reverse;
+}
+
+
+.songListHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 35rpx;
+
+    height: 40px;
+    /* border-bottom: solid 1px gray; */
+
+    /* position: fixed; */
+    top: 20%;
+    left: 70rpx;
+    right: 70rpx;
+}
+
+.songListHeader .closeList .closebtn {
+    width: 40rpx;
+    height: 40rpx;
+    margin-right: 10rpx;
+}
+
+
+.playSongList-item {
+    margin-bottom: 30rpx;
+}
+
+.arName {
+    font-size: 25rpx;
+    color: #999999;
+}

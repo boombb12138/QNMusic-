@@ -1,0 +1,49 @@
+/* components/menu-item-v1/index.wxss */
+.item {
+    display: inline-block;
+    width: 100%;
+}
+
+
+.top {
+    position: relative;
+
+}
+
+.top .image {
+    height: 200rpx;
+    width: 200rpx;
+    border-radius: 5px;
+    background-size: cover;
+    /* margin-right: 10rpx; */
+}
+
+.top .playCount {
+    position: absolute;
+    right: 0;
+    bottom: 10rpx;
+    color: #ffffff;
+    font-size: 22rpx;
+    padding: 6rpx 10rpx;
+    background: rgba(0, 0, 0, .5);
+}
+
+
+
+.item .bottom {
+    width: 100%;
+    font-size: 26rpx;
+    /* 显示两行 */
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    /* 可以把 块容器 中的内容限制为指定的行数. 只有上面两行代码设置了才能生效 */
+    -webkit-line-clamp: 2;
+    display: -moz-box;
+    -moz-line-clamp: 2;
+    -moz-box-orient: vertical;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: normal;
+    overflow: hidden;
+}

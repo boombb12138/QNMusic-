@@ -1,0 +1,101 @@
+/* components/song-detail-header/index.wxss */
+.header{
+    height: 450rpx;
+    width: 100vw;
+    position: relative;
+    left: -20rpx;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+}
+
+.bg-img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.bg-cover{
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .7);
+    backdrop-filter: blur(.4);
+}
+
+.content {
+    display: flex;
+margin-top: 60rpx;
+padding: 0 60rpx;
+}
+
+.content .img{
+width: 220rpx;
+height: 220rpx;
+border-radius: 16rpx;
+}
+
+.content .info{
+    flex: 1;
+    position: relative;
+    margin-left: 20rpx;
+    height: 220rpx;
+    
+}
+
+.info .author {
+    margin-top: 20rpx;
+    display: flex;
+    align-items: center;
+}
+
+.info .author .arImg{
+    border-radius: 50%;
+    width: 50rpx;
+    height: 50rpx;
+}
+
+.info .author .nickName{
+    margin-left: 5px;
+    font-size: 13px;
+}
+
+.info .description{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 13px;
+    overflow: hidden;
+    white-space: nowrap;
+    /* 一个省略号 (, )来表示被截断的文本 */
+    text-overflow: ellipsis;
+    /* display: inline-block; */
+}
+
+.operation{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30rpx;
+    padding: 30rpx;
+}
+
+.operation .item{
+    display: flex;
+   align-items: center;
+}
+
+.operation  .icon{
+    width: 30rpx;
+    height: 30rpx;
+    margin-right: 5px;
+}
+.operation .text{
+    font-size: 14px;
+}

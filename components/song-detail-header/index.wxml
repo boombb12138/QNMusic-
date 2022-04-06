@@ -1,0 +1,35 @@
+<!--components/song-detail-header/index.wxml-->
+<wxs src='../../utils/format.wxs' module="format"></wxs>
+
+<view class="header">
+    <view class="background">
+        <image src="{{songInfo.coverImgUrl}}" class="bg-img" mode="aspectFill" />
+        <view class="bg-cover"></view>
+    </view>
+
+    <view class="content">
+        <image src="{{songInfo.coverImgUrl}}" class="img" mode="aspectFill" />
+        <view class="info">
+            <view class="title">
+                {{songInfo.name}}   
+            </view>
+            <view class="author">
+                <image class="arImg" src="{{songInfo.creator.avatarUrl}}" mode="aspectFill"></image>
+                <text class="nickName">{{songInfo.creator.nickname}}</text>
+            </view>
+            <view class="description">
+                {{songInfo.description}}
+            </view>
+        </view>
+    </view>
+    <view class="operation">
+        <view class="favor item">
+            <image src="/assets/images/icons/favor_icon.png " mode="widthfix" class="icon"/>
+            <text class="text">{{format.formatCount(songInfo.playCount)}}</text>
+        </view>
+        <view class="share item">
+        <image src="/assets/images/icons/share_icon.png" class="icon" mode="widthfix"/>
+        <text>分享</text>
+        </view>
+    </view>
+</view>

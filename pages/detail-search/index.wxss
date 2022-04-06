@@ -1,0 +1,78 @@
+/* pages/detail-search2/index.wxss */
+page {
+    padding: 0 20rpx;
+padding-top: 56px;
+}
+
+.van-search{
+    position: fixed;
+    top: 0;
+    left: 20rpx;
+    right: 20rpx;  
+}
+
+.hot {
+    padding:20rpx;
+    margin-top: 50px;
+  }
+
+.header {
+    font-weight: 560;
+    font-size: 32rpx;
+    margin-bottom: 20rpx;
+}
+
+.hotsong {
+    line-height: 80rpx;
+    margin-right: 20rpx;
+    font-size: 14px;
+    white-space: nowrap;
+    background-color: #fff;
+
+}
+
+.hotsong:first-of-type {
+    color: #26ce8a;
+}
+
+.suggest {
+    padding: 10rpx;
+    margin-top: 50px;
+}
+
+.suggest .title {
+    color: #26ce8a;
+}
+
+.list {
+    align-items: center;
+    margin-top: 16rpx;
+}
+
+.list .item {
+    margin-top: 30rpx;
+    display: flex;
+    align-items: center;
+}
+
+.list .suggestSong {
+    font-size: 33rpx;
+}
+
+.list .searchIcon {
+    width: 50rpx;
+    height: 50rpx;
+    margin-right: 20rpx;
+}
+
+.searchResult {
+    margin-top: 50px;
+    padding: 10px;
+    /* z-index: -1; */
+}
+
+.searchResult .title {
+    color: #26ce8a;
+    font-size: 18px;
+    font-weight: 550;
+}

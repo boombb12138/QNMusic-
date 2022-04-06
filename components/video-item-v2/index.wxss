@@ -1,0 +1,48 @@
+/* components/video-item-v2/index.wxss */
+.item {
+  width: 100%;
+  margin-bottom: 20rpx;
+  display: flex;
+  padding-left:20rpx;
+}
+
+
+.image {
+  border-radius: 12rpx;
+  width: 170px;
+  height: 100px;
+  box-sizing: border-box;
+  /* margin: 0px 10rpx; */
+}
+
+
+.content {
+  /* margin-top: 10rpx; */
+  font-size: 28rpx;
+  width: 50%;
+  /* 显示两行 */
+  text-overflow: ellipsis;
+  /* 在进行移动端设备自适应布局中,-webkit-box布局更加合适
+   不同的浏览器有不同的前缀 -webkit-box -moz-box*/
+  display: -webkit-box;
+  -webkit-line-clamp:3;
+  -webkit-box-orient: vertical;
+  display: -moz-box;
+  -moz-line-clamp: 3;
+  /* 設置子元素竖向排列 */
+  -moz-box-orient: vertical;
+  /* 允许长单词打断换行 */
+  word-wrap: break-word;
+  word-break: break-all;
+  /* 忽视空格和换行符 */
+  white-space: normal;
+  overflow: hidden;
+
+  padding: 0rpx 10rpx;
+}
+
+.userName {
+  color: gray;
+  font-size: 24rpx;
+  margin-top: 10rpx;
+}

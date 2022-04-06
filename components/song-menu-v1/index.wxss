@@ -1,0 +1,26 @@
+/* components/song-menu-v1/index.wxss */
+
+.menu-list{
+    white-space: nowrap;
+    /* 讓视口的宽度是scroll-view的宽度 */
+    width: 100vw;
+    position: relative;
+    left: -20rpx;
+}
+
+.menu-item{
+    display: inline-block;
+    margin-left: 10rpx;
+    /* margin-right: 5px; */
+    width: 200rpx;
+    /* height: 100px; */
+    /* background-color:#fafafa; */
+    vertical-align: top;
+}
+
+.menu-item:last-of-type{
+    margin-right:20rpx ;
+}
+.menu-item:first-of-type{
+    margin-left:20rpx ;
+}

@@ -1,0 +1,35 @@
+/* pages/detail-video/index.wxss */
+page {
+    padding-top: 230px;
+}
+
+
+.video {
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.titleinfo {
+    margin-left: 20rpx;
+    z-index: -1;
+}
+
+.title {
+    font-weight: 600;
+    font-size:40rpx;
+}
+
+.info {
+    color: gray;
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 13px;
+}
+
+.relative {
+    margin-left: 20rpx;
+    font-size: 30rpx;
+    font-weight: 550;
+    margin-bottom: 5px;
+}

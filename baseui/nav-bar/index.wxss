@@ -1,0 +1,60 @@
+/* baseui/nav-bar/index.wxss */
+.status {
+    /* background-color: red; */
+}
+
+.nav {}
+
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* line-height: 44px; */
+}
+
+.left,
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 120rpx;
+}
+
+.center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.left-slot:empty + .left-arrow{
+    display: block;
+}
+
+.left-arrow{
+    display: none;
+}
+
+
+.left-arrow {
+    /* padding-top: 5px; */
+}
+
+.left-arrow .icon {
+    width: 40rpx;
+    /* 去除图片下面的经典3像素 */
+    display: block;
+    /* margin-top: 2px; */
+}
+
+.center-title{
+    display: none;
+}
+
+.center-slot:empty + .center-title{
+    display: block;
+}

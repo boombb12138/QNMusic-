@@ -1,0 +1,47 @@
+/* components/song-item-v2/index.wxss */
+
+page {
+    padding: 10rpx;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    /* position: relative; */
+    margin-top: 20rpx;
+}
+
+.index {
+    font-size: 30rpx;
+    padding: 12rpx;
+    font-weight: 500;
+}
+
+.info {
+    flex: 1;
+    /* position: absolute;
+    top: 0; */
+    align-items: center;
+
+}
+
+.info .source {
+    display: flex;
+    align-items: center;
+    font-size: 24rpx;
+    color: #999999;
+}
+
+.source .icon {
+    width: 30rpx;
+    height: 22rpx;
+    margin-right: 10rpx;
+}
+
+.source .dots{
+margin: 0 6rpx  ;
+}
+
+.info .name {
+    font-weight: 550;
+}
